@@ -18,12 +18,12 @@ class Inflector extends BaseInflector
      * The keys are the regular expressions and the values are the corresponding replacements.
      */
     public static $plurals = [
-        '/m$/'    => 'ns',
-        '/l$/'    => 'is',
-        '/r$/'    => 'res',
+        '/m$/i'    => 'ns',
+        '/l$/i'    => 'is',
+        '/r$/i'    => 'res',
         '/(ç|l)ão$/i' => '\1ões',
-        '/(p)ão$/'   => '\1ães',
-        '/$/'     => 's',
+        '/(p)ão$/i'   => '\1ães',
+        '/$/i'     => 's',
     ];
 
 
@@ -32,11 +32,11 @@ class Inflector extends BaseInflector
      * The keys are the regular expressions and the values are the corresponding replacements.
      */
     public static $singulars = [
-        '/ns$/'    => 'm',
-        '/is$/'    => 'l',
-        '/res$/'    => 'r',
+        '/ns$/i'    => 'm',
+        '/is$/i'    => 'l',
+        '/res$/i'    => 'r',
         '/(ç|l)ões$/i' => '\1ão',
-        '/(p)ães$/'   => '\1ão',
+        '/(p)ães$/i'   => '\1ão',
         '/s$/i'     => '',
     ];
 
